@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html style="font-family: Roboto, Arial, sans-serif;">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -7,6 +7,7 @@
 <link rel="shortcut icon" href="assets/CX icon.png">
 </head>
 <style>h1{font-size:40px;}p{font-size:24px;}haha{font-weight: normal;font-size:24px;}
+sec{font-size:36px;}mid{font-size:32px;}
 .container {
     display: flex;
     align-items: center;
@@ -25,8 +26,51 @@ img {
     padding-top: 0%;
     float: left;
 }
+.line {
+  margin:5px 0;
+  height:2px;
+  background:
+    repeating-linear-gradient(90deg,#1f2328 0 10px,#0000 0 12px)
+}
+* {
+  color: #1f2328
+}
 </style>
-<body>
-<h1>This page is supposed to show how to play Climbing Xiangqi</h1>
+<body style="margin:20px">
+<h1><b>Climbing Xiangqi: How to Play</b></h1>
+<mid><b>• Controls</b></mid>
+<p>• To pan the camera, you can left click (touch if on mobile) on an empty space and drag; alternatively,
+    you can right click anywhere and drag.<br/>
+    • You can click on and drag a face-up piece up to see the piece under it.<br/>
+    • To flip a piece, click on the piece you want to flip, then click the FLIP button.<br/>
+    • To move a piece, click the piece you want to move first, then click where you want to move it, then click the MOVE button.<br/>
+    • To take (capture) a piece, click the piece you want to take with first, then click the piece you want to take, then click the TAKE button.
+</p>
+<div class="line"></div>
+<p></p>
+<sec><b>Rules of the Game</b></sec><p></p>
+<mid><b>• Introduction</b></mid>
+<p>Climbing Xiangqi is a variant of xiangqi (Chinese chess), similar to Dark Chess (暗棋, also known as
+    Banqi, Half Chess, Blind Chess, etc.).<br/>
+    The game is played on a board with a 4*4 grid, using all of the 32 pieces in a standard xiangqi set.
+</p>
+<mid><b>• Pieces</b></mid>
+<p>There are 7 types of pieces: (in the order of their ranks, highest to lowest)<br/>
+1. <span style="color:red">帥</span>/<span style="color:black">將</span> (General)<br/>
+2. <span style="color:red">仕</span>/<span style="color:black">士</span> (Advisor)<br/>
+3. <span style="color:red">相</span>/<span style="color:black">象</span> (Elephant)<br/>
+4. <span style="color:red">俥</span>/<span style="color:black">車</span> (Chariot)<br/>
+5. <span style="color:red">傌</span>/<span style="color:black">馬</span> (Horse)<br/>
+6. <span style="color:red">炮</span>/<span style="color:black">砲</span> (Cannon)<br/>
+7. <span style="color:red">兵</span>/<span style="color:black">卒</span> (Soldier)
+</p>
+<mid><b>• Movements</b></mid>
+<p>Only the top piece in a square can be flipped or moved.<br/>
+    All pieces move and capture the same way except <span style="color:red">炮</span>/<span style="color:black">砲</span>.
+    When a piece (including <span style="color:red">炮</span>/<span style="color:black">砲</span>) moves,
+    it can only move to the top of one of the adjacent squares of its square, also, a piece
+    cannot move 2 or more tiers up or down at once.
+</p>
+<!--<p style="color: #FF0000"><b>wvcme </b>mevmvm</p>-->
 </body>
 </html>
