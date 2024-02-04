@@ -55,21 +55,57 @@ img {
     The game is played on a board with a 4*4 grid, using all of the 32 pieces in a standard xiangqi set.
 </p>
 <mid><b>• Pieces</b></mid>
-<p>There are 7 types of pieces: (in the order of their ranks, highest to lowest)<br/>
-1. <span style="color:red">帥</span>/<span style="color:black">將</span> (General)<br/>
-2. <span style="color:red">仕</span>/<span style="color:black">士</span> (Advisor)<br/>
-3. <span style="color:red">相</span>/<span style="color:black">象</span> (Elephant)<br/>
-4. <span style="color:red">俥</span>/<span style="color:black">車</span> (Chariot)<br/>
-5. <span style="color:red">傌</span>/<span style="color:black">馬</span> (Horse)<br/>
-6. <span style="color:red">炮</span>/<span style="color:black">砲</span> (Cannon)<br/>
-7. <span style="color:red">兵</span>/<span style="color:black">卒</span> (Soldier)
+<p>There are 2 colors and 7 types of pieces: (in the order of their ranks, highest to lowest)<br/>
+1. <span style="color:red">帥</span>/<span style="color:black">將</span> (General): 1 each<br/>
+2. <span style="color:red">仕</span>/<span style="color:black">士</span> (Advisor): 2 each<br/>
+3. <span style="color:red">相</span>/<span style="color:black">象</span> (Elephant): 2 each<br/>
+4. <span style="color:red">俥</span>/<span style="color:black">車</span> (Chariot): 2 each<br/>
+5. <span style="color:red">傌</span>/<span style="color:black">馬</span> (Horse): 2 each<br/>
+6. <span style="color:red">炮</span>/<span style="color:black">砲</span> (Cannon): 2 each<br/>
+7. <span style="color:red">兵</span>/<span style="color:black">卒</span> (Soldier): 5 each
 </p>
-<mid><b>• Movements</b></mid>
-<p>Only the top piece in a square can be flipped or moved.<br/>
-    All pieces move and capture the same way except <span style="color:red">炮</span>/<span style="color:black">砲</span>.
-    When a piece (including <span style="color:red">炮</span>/<span style="color:black">砲</span>) moves,
-    it can only move to the top of one of the adjacent squares of its square, also, a piece
-    cannot move 2 or more tiers up or down at once.
+<mid><b>• Setup</b></mid>
+<p>
+    • Flip all 32 pieces face-down and shuffle them, then stack 2 pieces in each of the 16 squares.
+</p>
+<mid><b>• Gameplay</b></mid>
+<p>
+    • The player who goes first starts the game by flipping a piece up. The color of this piece is their color,
+    and the other color is the color of the player going second.<br/>
+    • The two players alternate turns. On their turn, a player has to flip a piece up, or move 1 of their pieces,
+    capture or not.<br/>
+    • A player loses if they cannot make a move on their turn. The other player wins.
+</p>
+<mid><b>• How pieces move</b></mid>
+<p>
+    • Only the top piece in a square can be flipped, moved or captured.<br/>
+    • All pieces move the same way (when not capturing).<br/>
+    • When a piece moves (without making a capture),
+    it can only move to the top of one of its orthogonally adjacent squares (up, down, left or right), and
+    can only move there if it stays in the same level, goes 1 level higher, or 1 level lower.
+    Basically, a piece cannot move 2 or more levels up or down at once.<br/>
+    • The highest level a piece can go to is level 3; you cannot stack 4 or more pieces in the same square.
+</p>
+<mid><b>• How pieces capture</b></mid>
+<p>
+    • A piece can capture another by removing it and moving to where it was.<br/>
+    • All pieces can only capture pieces of the other color.<br/>
+    • <span style="color:red">帥</span>/<span style="color:black">將</span> can capture any piece except
+    <span style="color:red">兵</span>/<span style="color:black">卒</span>.<br/>
+    • <span style="color:red">仕</span>/<span style="color:black">士</span>, <span style="color:red">相</span>/<span style="color:black">象</span>,
+    <span style="color:red">俥</span>/<span style="color:black">車</span> and <span style="color:red">傌</span>/<span style="color:black">馬</span> can
+    only capture pieces of the same or lower ranks.<br/>
+    • <span style="color:red">炮</span>/<span style="color:black">砲</span> can capture any piece
+    (but they move differently from other pieces when capturing).<br/>
+    • <span style="color:red">兵</span>/<span style="color:black">卒</span> can only capture
+    <span style="color:red">帥</span>/<span style="color:black">將</span> and
+    <span style="color:red">兵</span>/<span style="color:black">卒</span>.<br/>
+    • Except <span style="color:red">炮</span>/<span style="color:black">砲</span>,
+    all pieces capture the same way as they move, but can only capture pieces of the same level.<br/>
+    • <span style="color:red">炮</span>/<span style="color:black">砲</span> can (and can only) capture any piece of the same
+    row or column, as long as:<br/>
+    1. The target piece is on the same level as the <span style="color:red">炮</span>/<span style="color:black">砲</span>.<br/>
+    2. 
 </p>
 <!--<p style="color: #FF0000"><b>wvcme </b>mevmvm</p>-->
 </body>
