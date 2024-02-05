@@ -77,7 +77,10 @@ a:visited { color: #551A8B; }
     and the other color is the color of the player going second.<br/>
     • The two players alternate turns. On their turn, a player has to flip a piece up, or move 1 of their pieces,
     capture or not.<br/>
-    • A player loses if they cannot make a move on their turn. The other player wins.
+    • A player loses if they cannot make a move on their turn. The other player wins. (The game does not end
+    as long as the turn player has a move to make, even if all of their 16 pieces have been captured.)<br/>
+    • Therefore, you should try to capture or "step" onto the opponent's pieces
+    so that they run out of moves and you win.
 </p>
 <mid><b>• How pieces move</b></mid>
 <p>
@@ -93,6 +96,7 @@ a:visited { color: #551A8B; }
 <p>
     • A piece can capture another by removing it and moving to where it was.<br/>
     • All pieces can only capture pieces of the other color.<br/>
+    • All pieces can only capture pieces that are on the same level as themselves.<br/>
     • <span style="color:red">帥</span>/<span style="color:black">將</span> can capture any piece except
     <span style="color:red">兵</span>/<span style="color:black">卒</span>.<br/>
     • <span style="color:red">仕</span>/<span style="color:black">士</span>, <span style="color:red">相</span>/<span style="color:black">象</span>,
@@ -104,12 +108,15 @@ a:visited { color: #551A8B; }
     <span style="color:red">帥</span>/<span style="color:black">將</span> and
     <span style="color:red">兵</span>/<span style="color:black">卒</span>.<br/>
     • Except <span style="color:red">炮</span>/<span style="color:black">砲</span>,
-    all pieces capture the same way as they move, but can only capture pieces of the same level.<br/>
+    all pieces capture the same way as they move, but can only capture pieces on the same level as themselves.<br/>
     • <span style="color:red">炮</span>/<span style="color:black">砲</span> can (and can only) capture any piece of the same
     row or column, as long as:<br/>
-    1. The target piece is on the same level as the <span style="color:red">炮</span>/<span style="color:black">砲</span>.<br/>
-    2. 
+    &nbsp;&nbsp;1. The target piece is on the same level as the <span style="color:red">炮</span>/<span style="color:black">砲</span> itself.<br/>
+    &nbsp;&nbsp;2. There is exactly 1 square where the top piece is on a level as high as or higher than that of the
+    <span style="color:red">炮</span>/<span style="color:black">砲</span> itself, between the target piece
+    and the <span style="color:red">炮</span>/<span style="color:black">砲</span> itself.
 </p>
+<p>That's basically it. Hope you enjoy the game!</p>
 <!--<p style="color: #FF0000"><b>wvcme </b>mevmvm</p>-->
 </body>
 </html>
