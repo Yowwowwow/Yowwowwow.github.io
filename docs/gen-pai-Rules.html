@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html style="font-family: Roboto, Arial, sans-serif;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>gèn pái Rules</title>
+<link rel="shortcut icon" href="assets/gen pai logo.png">
+</head>
+<style>h1{font-size:40px;}p{font-size:24px;}haha{font-weight: normal;font-size:24px;}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+img {
+    width: 225px;
+    /*max-width: 150px;
+    max-height:150px;*/
+    aspect-ratio: 1/1;
+    float: left;
+}
+.text {
+    font-size: 24px;
+    padding-left: 24px;
+    padding-top: 0%;
+    float: left;
+}
+a:link { color: #0000EE; }
+a:visited { color: #551A8B; }
+* {color: #1f2328}
+</style>
+<body style="margin:20px">
+<h1>gèn pái: How to Play</h1>
+<p>Game link: <a href="https://yowwowwow.github.io/gen-pai">https://yowwowwow.github.io/gen-pai</a><br><br>
+  Each player starts with 4 HP and 2 cards in hand.<br>
+  At the start of each player's turns, they have to
+  draw 2 cards, or 1 if they have 3 cards in hand, or 0 if they have 4 cards in hand.<br>
+  Reduce the opponent's HP to 0 to win! It's a tie if both players' HP reach 0 simultaneously.<br>
+  There are 15 cards in total.<br>
+  There could be situations where both players have 4 cards in hand but can't play any. Although the game
+  softlocks in this case, you can count it as a tie.<br>
+  <span style="color:#ff0000">gèn</span> (4): Opponent -1 HP.<br>
+  <span style="color:#ff9400">tāu gèn</span> (4): You +1 HP. (Can't play this when you have <span style="color:#10ffa5">禁回</span> debuff, or have full (4) HP.)<br>
+  <span style="color:#7f00ff">互傷</span> (2): Both -1 HP.<br>
+  <span style="color:#92b42d">歧視</span> (2): Give your opponent <span style="color:#92b42d">歧視</span> debuff. (They can't draw or play any card on their next turn. The debuff will be removed when they end their turn.)<br>
+  <span style="color:#10ffa5">禁回</span> (2): Give your opponent <span style="color:#10ffa5">禁回</span> debuff. (Can't play this when they already have it.)<br>
+  <span style="color:#ff7810">燒燬</span> (1): Remove all cards and debuffs from both players.
+</p>
+</body>
+</html>
