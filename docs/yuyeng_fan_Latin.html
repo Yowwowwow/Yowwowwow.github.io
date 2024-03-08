@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html style="font-family: Roboto, Arial, sans-serif;">
+    <head>
+        <meta charset="utf-8">
+        <title>TEST</title>
+    </head>
+    <style>
+        textarea{resize: none; background: white;}
+        h6{font-size: 1.8px;}
+    </style>
+    <body>
+        <textarea id="input" placeholder="" style="width: 99%; height: 280px;" spellcheck="false"></textarea>
+        <button id="forth" style="height: 40px; width: 60px;" onclick="convforth()">forth</button>
+        <button id="back" style="height: 40px; width: 60px;" onclick="convback()">back</button>
+        <button id="reverse" style="height: 40px; width: 60px;" onclick="reverse()">reverse</button>
+        <button id="brackets" style="height: 40px; width: 60px;" onclick="brackets()">(→)</button>
+        <h6></h6>
+        <textarea disabled id="output" placeholder="" style="width: 99%; height: 280px;"></textarea>
+        <script>
+            var bbb = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            var fff = "HLПΜYГЗΑИJZPΕQЬΛWSVTXΔƎCDUhlпμyгзαиjzpεqьʌwsvtxδɘcdu";
+            var left = "()[]{}<>";
+            var right = ")(][}{><";
+            function convforth()
+            {
+                let inp = document.getElementById('input').value;
+                let ans = "";
+                for(let i=0;i<inp.length;i++)
+                {
+                    let num = bbb.indexOf(inp[i]);
+                    if(num<0)
+                    {
+                        ans = ans.concat(inp[i]);
+                    }
+                    else
+                    {
+                        ans = ans.concat(fff[num]);
+                    }
+                }
+                document.getElementById('output').value = ans;
+            }
+            function convback()
+            {
+                let inp = document.getElementById('input').value;
+                let ans = "";
+                for(let i=0;i<inp.length;i++)
+                {
+                    let num = fff.indexOf(inp[i]);
+                    if(num<0)
+                    {
+                        ans = ans.concat(inp[i]);
+                    }
+                    else
+                    {
+                        ans = ans.concat(bbb[num]);
+                    }
+                }
+                document.getElementById('output').value = ans;
+            }
+            function reverse()
+            {
+                let inp = document.getElementById('output').value;
+                let ans = "";
+                for(let i=inp.length-1;i>-1;i--)
+                {
+                    ans = ans.concat(inp[i]);
+                }
+                document.getElementById('output').value = ans;
+            }
+            function brackets()
+            {
+                let inp = document.getElementById('output').value;
+                let ans = "";
+                for(let i=0;i<inp.length;i++)
+                {
+                    let num = left.indexOf(inp[i]);
+                    if(num<0)
+                    {
+                        ans = ans.concat(inp[i]);
+                    }
+                    else
+                    {
+                        ans = ans.concat(right[num]);
+                    }
+                }
+                document.getElementById('output').value = ans;
+            }
+        </script>
+    </body>
+</html>
