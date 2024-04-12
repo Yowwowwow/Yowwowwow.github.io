@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 100 100" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Layer-1" vectornator:layerName="Layer 1">
+<path d="M39.6008 18.8174C39.6008 17.0628 39.2459 19.0941 39.1016 19.8157C38.9245 20.701 38.7795 21.5925 38.6024 22.4779C38.3358 23.8112 38.0282 25.1361 37.7705 26.4712C36.9976 30.4763 36.2285 34.4851 35.2747 38.4511C32.4351 50.258 28.6296 61.4927 23.2948 72.3942C21.7807 75.4881 20.3834 78.9382 18.3032 81.7119" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" vectornator:layerName="Curve 1"/>
+<path d="M36.1066 49.0999C42.6507 52.3719 45.7651 59.2047 49.9168 64.7403" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" vectornator:layerName="Curve 2"/>
+<path d="M63.0614 20.4812C62.8398 20.0379 61.0086 24.9676 60.732 25.6392C60.2771 26.744 59.9145 27.8884 59.4009 28.967C56.4656 35.131 52.2066 40.3667 47.9202 45.6058" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" vectornator:layerName="Curve 3"/>
+<path d="M67.8867 56.0882C66.2512 59.3591 63.4833 62.3868 61.2312 65.2395C56.5061 71.2246 50.9751 76.4939 45.5907 81.8783" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" vectornator:layerName="Curve 4"/>
+<path d="M59.2345 44.441C68.6693 53.8758 74.9174 65.0884 81.6968 76.3875" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" vectornator:layerName="Curve 5"/>
+</g>
+</svg>
