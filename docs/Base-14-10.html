@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="yuyēng făn Latin converter.">
+        <title>Base 14 and 10</title>
+        <link rel="icon" href="assets/B14a10/B14a10.png">
+    </head>
+    <style>
+        textarea{resize: none; background: white;}
+        h6{font-size: 1.8px;}
+    </style>
+    <body style="margin-top: 2px;">
+        <p style="font-size: 24px; font-family: Arial, sans-serif; margin-top: 0; margin-bottom: 10px;">Base 14 and 10 converter</p>
+        <textarea id="input" oninput="convert()" placeholder="" style="width: 99%; height: 36vh; font-size: 24px; font-family: Arial, sans-serif;" spellcheck="false"></textarea>
+        <span id="direction" style="font-family: Arial, sans-serif;">Base 10 → 14</span>
+        <button id="swap" style="height: 40px; width: 60px;" onclick="Swap()">Swap</button>
+        <h6></h6>
+        <textarea disabled id="output" placeholder="" style="width: 99%; height: 36vh; font-size: 24px; font-family: Arial, sans-serif;"></textarea>
+        <script>
+            var dr=0;
+            const tarr = ["Base 10 → 14", "Base 14 → 10"];
+            var txtdis = document.getElementById("direction");
+            var inp = document.getElementById("input");
+            var cont = "";
+            function convert(){
+                if(dr==0){
+                    //TO DO
+                }
+            }
+            function Swap(){
+                dr=(0==dr)?1:0;
+                txtdis.innerHTML = tarr[dr];
+            }
+        </script>
+    </body>
+</html>
