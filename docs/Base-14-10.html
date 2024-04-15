@@ -19,7 +19,9 @@
         <h6></h6>
         <textarea disabled id="output" placeholder="" style="width: 99%; height: 36vh; font-size: 24px; font-family: Arial, sans-serif;"></textarea>
         <div id="ltp">
-
+            <img src="assets/B14a10/0.png" height="60px">
+            <img src="assets/B14a10/0.png" height="60px">
+            <img src="assets/B14a10/separator.svg" height="60px">
         </div>
         <script>
             var dr=0;
@@ -30,10 +32,14 @@
             var ltp = document.getElementById("ltp");
             const ten = "0123456789";
             const frt = "0123456789abcd";
-            const tentofrt = {"0":"0","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","10":"A","11":"B","12":"C","13":"D"};
             const cant = "Cannot convert.";
-            function litrpi(s){
+            const display = {
+                '0':'<img src="assets/B14a10/0.png" height="60px">',
                 //TODO
+            }
+            function litrpi(s){
+                if(s==="")return;
+
             }
             function convert(){
                 let s = inp.value;
@@ -77,7 +83,7 @@
                         nmr /= dnm;
                         let tail = "";
                         for(let i=0;i<pow;i++){
-                            tail = tentofrt[(nmr%14n).toString()].concat(tail);
+                            tail = (nmr%14n).toString(14).concat(tail);
                             nmr /= 14n;
                         }
                         let count = tail.length-1;
