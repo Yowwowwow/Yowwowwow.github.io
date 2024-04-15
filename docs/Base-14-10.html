@@ -18,14 +18,19 @@
         <button id="swap" style="height: 40px; width: 60px;" onclick="Swap()">Swap</button>
         <h6></h6>
         <textarea disabled id="output" placeholder="" style="width: 99%; height: 36vh; font-size: 24px; font-family: Arial, sans-serif;"></textarea>
+        <div id="ltp">
+
+        </div>
         <script>
             var dr=0;
             const tarr = ["Base 10 → 14", "Base 14 → 10"];
             var txtdis = document.getElementById("direction");
             var inp = document.getElementById("input");
             var oup = document.getElementById("output");
+            var ltp = document.getElementById("ltp");
             const ten = "0123456789";
             const frt = "0123456789abcd";
+            const tentofrt = {"0":"0","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9","10":"A","11":"B","12":"C","13":"D"};
             const cant = "Cannot convert.";
             function litrpi(s){
                 //TODO
@@ -57,11 +62,33 @@
                         mult*=10n;
                     }
                     fin = fin.concat(res.toString(14));
-                    if(posdot>=n-1){oup.value=fin; litrpi(fin); return;}
+                    if(posdot>=n-1){fin=fin.toUpperCase(); oup.value=fin; litrpi(fin); return;}
                     else{
-                        res = parseFloat(s.substring(posdot));
-                        fin = fin.concat(res.toString(14).substring(1));
-                        oup.value=fin; litrpi(fin); return;
+                        let nmr = 0n;
+                        let dnm = 1n;
+                        let pow = 0;
+                        for(let i=n-1;i>posdot;i--){
+                            nmr += dnm*BigInt(parseInt(s[i], 10));
+                            dnm *= 10n;
+                            pow += 0.8725028695492;
+                        }
+                        pow = Math.ceil(pow)+4;
+                        nmr *= 14n**BigInt(pow);
+                        nmr /= dnm;
+                        let tail = "";
+                        for(let i=0;i<pow;i++){
+                            tail = tentofrt[(nmr%14n).toString()].concat(tail);
+                            nmr /= 14n;
+                        }
+                        let count = tail.length-1;
+                        while(count>=0 && tail[count]=='0')count--;
+                        if(count<0){
+                            tail = "";
+                        }else{
+                            tail = ".".concat(tail.substring(0, count+1));
+                        }
+                        fin = fin.concat(tail);
+                        fin=fin.toUpperCase(); oup.value=fin; litrpi(fin); return;
                     }
                 }
                 else{
@@ -71,6 +98,7 @@
             function Swap(){
                 dr=(0==dr)?1:0;
                 txtdis.innerHTML = tarr[dr];
+                convert();
             }
         </script>
     </body>
