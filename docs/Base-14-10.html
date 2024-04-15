@@ -23,10 +23,49 @@
             const tarr = ["Base 10 → 14", "Base 14 → 10"];
             var txtdis = document.getElementById("direction");
             var inp = document.getElementById("input");
-            var cont = "";
+            var oup = document.getElementById("output");
+            const ten = "0123456789";
+            const frt = "0123456789abcd";
+            const cant = "Cannot convert.";
+            function litrpi(s){
+                //TODO
+            }
             function convert(){
-                if(dr==0){
-                    //TO DO
+                let s = inp.value;
+                let n = s.length;
+                if(n==0){
+                    oup.value = "";
+                    litrpi("");
+                }
+                else if(dr==0){
+                    if(s=="." || s=="-" || s=="+"){oup.value=cant; litrpi(""); return;}
+                    let dotcount = 0;
+                    let posdot = n;
+                    var pre = "";
+                    for(let i=0;i<n;i++)if(s[i]=='.')dotcount++;
+                    if(dotcount>1){oup.value=cant; litrpi(""); return;}
+                    if(dotcount==1)posdot=s.indexOf('.');
+                    let iii=0;
+                    if(s[0]=='-'){pre="-"; iii=1;}else if(s[0]=='+'){pre="+"; iii=1;}
+                    for(;iii<n;iii++)if(!(iii==posdot || ten.includes(s[iii]))){oup.value=cant; litrpi(""); return;}
+                    let front = pre.length;
+                    let res = 0n;
+                    let fin = (pre=="-")?pre:"";
+                    let mult = 1n;
+                    for(let i=posdot-1;i>=front;i--){
+                        res += mult*BigInt(parseInt(s[i], 10));
+                        mult*=10n;
+                    }
+                    fin = fin.concat(res.toString(14));
+                    if(posdot>=n-1){oup.value=fin; litrpi(fin); return;}
+                    else{
+                        res = parseFloat(s.substring(posdot));
+                        fin = fin.concat(res.toString(14).substring(1));
+                        oup.value=fin; litrpi(fin); return;
+                    }
+                }
+                else{
+                    //TODO
                 }
             }
             function Swap(){
