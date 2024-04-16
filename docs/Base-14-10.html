@@ -10,6 +10,8 @@
     <style>
         textarea{resize: none; background: white;}
         h6{font-size: 1.8px;}
+
+        img{pointer-events: none;}
     </style>
     <body style="margin-top: 2px;">
         <p style="font-size: 24px; font-family: Arial, sans-serif; margin-top: 0; margin-bottom: 10px;">Base 14 and 10 converter</p>
@@ -18,11 +20,7 @@
         <button id="swap" style="height: 40px; width: 60px;" onclick="Swap()">Swap</button>
         <h6></h6>
         <textarea disabled id="output" placeholder="" style="width: 99%; height: 36vh; font-size: 24px; font-family: Arial, sans-serif;"></textarea>
-        <div id="ltp">
-            <img src="assets/B14a10/0.png" height="60px">
-            <img src="assets/B14a10/0.png" height="60px">
-            <img src="assets/B14a10/separator.svg" height="60px">
-        </div>
+        <div id="ltp"></div>
         <script>
             var dr=0;
             const tarr = ["Base 10 → 14", "Base 14 → 10"];
@@ -33,13 +31,36 @@
             const ten = "0123456789";
             const frt = "0123456789abcd";
             const cant = "Cannot convert.";
+            const tall = "60px";
             const display = {
-                '0':'<img src="assets/B14a10/0.png" height="60px">',
-                //TODO
+                '0':`<img src="assets/B14a10/0.svg" height="${tall}">`,
+                '1':`<img src="assets/B14a10/1.svg" height="${tall}">`,
+                '2':`<img src="assets/B14a10/2.svg" height="${tall}">`,
+                '3':`<img src="assets/B14a10/3.png" height="${tall}">`,
+                '4':`<img src="assets/B14a10/4.svg" height="${tall}">`,
+                '5':`<img src="assets/B14a10/5.png" height="${tall}">`,
+                '6':`<img src="assets/B14a10/6.png" height="${tall}">`,
+                '7':`<img src="assets/B14a10/7.svg" height="${tall}">`,
+                '8':`<img src="assets/B14a10/8.svg" height="${tall}">`,
+                '9':`<img src="assets/B14a10/9.svg" height="${tall}">`,
+                'A':`<img src="assets/B14a10/A.png" height="${tall}">`,
+                'B':`<img src="assets/B14a10/B.svg" height="${tall}">`,
+                'C':`<img src="assets/B14a10/C.svg" height="${tall}">`,
+                'D':`<img src="assets/B14a10/D.svg" height="${tall}">`,
+                '-':`<img src="assets/B14a10/minus.svg" height="${tall}">`,
+                '.':`<img src="assets/B14a10/separator.svg" height="${tall}">`,
             }
             function litrpi(s){
-                if(s==="")return;
-
+                if(s===""){ltp.innerHTML=""; return;}
+                let ans = "";
+                for(let i=0;i<s.length;i++){
+                    if(s[i] in display){
+                        ans = ans.concat(display[s[i]]);
+                    }else{
+                        ans = ans.concat(s[i]);
+                    }
+                }
+                ltp.innerHTML = ans;
             }
             function convert(){
                 let s = inp.value;
