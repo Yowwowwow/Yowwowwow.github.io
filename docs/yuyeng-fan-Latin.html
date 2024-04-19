@@ -27,7 +27,7 @@
             var right = ")(][}{><";
             function convforth()
             {
-                let inp = document.getElementById('input').value;
+                let inp = document.getElementById('input').value.normalize("NFD");
                 let ans = "";
                 for(let i=0;i<inp.length;i++)
                 {
@@ -45,7 +45,7 @@
             }
             function convback()
             {
-                let inp = document.getElementById('input').value;
+                let inp = document.getElementById('input').value.normalize("NFD");
                 let ans = "";
                 for(let i=0;i<inp.length;i++)
                 {
@@ -63,7 +63,7 @@
             }
             function reverse()
             {
-                let inp = document.getElementById('output').value;
+                let inp = document.getElementById('output').value.normalize("NFD");
                 let ans = "";
                 for(let i=inp.length-1;i>-1;i--)
                 {
@@ -73,7 +73,7 @@
             }
             function brackets()
             {
-                let inp = document.getElementById('output').value;
+                let inp = document.getElementById('output').value.normalize("NFD");
                 let ans = "";
                 for(let i=0;i<inp.length;i++)
                 {
