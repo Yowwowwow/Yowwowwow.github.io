@@ -3,6 +3,6 @@
 <svg height="110" width="110" xmlns="http://www.w3.org/2000/svg">
   <path d="M5 5 L38.333333 38.333333"
   fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
-  <path d="M105 5 L5 55 H105 Q71.666667 71.666667 55 105"
+  <path d="M105 5 L5 55 H105 Q80 80 105 105"
   fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
 </svg>
