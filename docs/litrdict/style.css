@@ -1,0 +1,4 @@
+.ltp img{
+    pointer-events: none;
+    filter: saturate(100) grayscale(1) contrast(3);
+}
