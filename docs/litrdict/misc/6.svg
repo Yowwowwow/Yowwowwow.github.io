@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Made by lì tŕ, for displaying lì tŕ pí symbols. -->
+
+<!-- Size should be 110*110, while glyphs only use points in the 100*100 square in the middle. -->
+
+<svg
+   height="110"
+   width="110"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="6.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="15.379572"
+     inkscape:cy="63.462833"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M 5,37.821581 C 11.907455,7.1846115 25.878869,4.6764848 29.827064,5.0332476 56.913669,7.4808197 16.161534,58.686057 19.373132,91.614344 21.50289,113.45061 48.712824,103.02317 55.819922,98.627898 91.540888,76.536845 96.523248,5.0002739 73.740313,5.0002739 c -19.920436,0 -36.584346,66.7600191 12.27552,91.7473731 C 96.733164,102.22858 97.06571,102.37105 105,105"
+     fill="none"
+     opacity="1"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="10"
+     id="path1"
+     sodipodi:nodetypes="csssssc" />
+</svg>

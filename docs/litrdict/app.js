@@ -95,6 +95,7 @@ function parseltp(){
             else if(svgs.includes(seps[i]))ans = ans.concat(`<img src="svgs/${seps[i]}.svg" height="${height}">`);
             else if(pngs.includes(seps[i]))ans = ans.concat(`<img src="pngs/${seps[i]}.png" height="${height}">`);
             else if(jpgs.includes(seps[i]))ans = ans.concat(`<img src="jpgs/${seps[i]}.jpg" height="${height}">`);
+            else if(seps[i].length>4 && seps[i].slice(seps[i].length-4)=='.')ans.concat(`<img src="misc/${seps[i]}" height="${height}">`);
             else ans = ans.concat(seps[i]);
         }
         ltps[fieldcount].innerHTML = ans;
