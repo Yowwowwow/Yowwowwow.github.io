@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 100 100" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs/>
+<g id="Layer-1" vectornator:layerName="Layer 1">
+<path d="M21.6485 18.5341C21.046 21.5469 21.5239 24.8327 21.4652 27.8852C21.3876 31.9201 21.206 35.9523 21.0985 39.9865C20.7405 53.4112 20.7317 66.899 20.7317 80.3243" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" vectornator:layerName="Curve 1"/>
+<path d="M21.4652 56.305C27.2605 56.305 33.1439 56.5282 38.8838 55.5716" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" vectornator:layerName="Curve 2"/>
+<path d="M46.768 19.0842C51.7463 19.0842 56.6594 19.0275 61.6196 18.7175C62.0692 18.6894 65.6875 18.0522 66.0201 18.7175C66.2903 19.2578 61.2815 24.1895 60.7029 24.7682C54.4977 30.9734 47.271 36.6407 38.8838 39.4365" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" vectornator:layerName="Curve 3"/>
+<path d="M58.1359 28.6186C60.3785 28.6186 62.4138 30.0241 64.3699 31.0022C66.7337 32.1841 69.1853 33.2567 71.5207 34.4859C73.6495 35.6063 75.46 37.5714 77.7548 38.3363" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" vectornator:layerName="Curve 4"/>
+<path d="M37.0036 47.6641C39.0683 46.6317 41.7395 46.9502 43.971 46.7473C47.1567 46.4577 50.3085 46.1966 53.5054 46.0139C58.9608 45.7022 73.4499 43.2966 77.8915 46.9307C81.3763 49.7819 77.2697 59.6257 76.2413 62.8824C73.9775 70.0509 70.9286 81.5845 61.573 81.5845C59.8825 81.5845 58.2624 80.8944 56.6224 80.4844C54.7381 80.0133 53.0425 78.9695 51.3052 78.1008" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" vectornator:layerName="Curve 5"/>
+</g>
+</svg>
