@@ -9,6 +9,7 @@ const reps = { //replacements
     "e_*":"e_ kuyei.svg",
     "5":"fo.svg",
     "7":"ga.svg",
+    "~":"gepf.svg",
     "hau_ang*":"hau_ang kuyei.svg",
     "1-":"hiou do.svg",
     "1":"hiou.svg",
