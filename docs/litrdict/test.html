@@ -19,7 +19,7 @@
     <script src="app.js"></script>
     <script>
         document.getElementById("aaa").innerHTML = getEntry();
-        document.getElementById("bbb").innerHTML = getTesttxt();
+        getTesttxt((y) => document.getElementById("bbb").innerHTML=y);
     </script>
 </body>
 </html>
