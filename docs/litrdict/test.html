@@ -15,11 +15,24 @@
     <p>TEST</p>
     <p id="aaa"></p>
     <p id="bbb"></p>
+    <button type="button" onclick="susamogus('sus')">set word to sus</button>
+    <button type="button" onclick="susamogus('amogus')">set word to amogus</button>
     <script src="ltp.js"></script>
     <script src="app.js"></script>
     <script>
+        var ent = getEntry();
         document.getElementById("aaa").innerHTML = getEntry();
         getTesttxt((y) => document.getElementById("bbb").innerHTML=y);
+        function susamogus(w){
+            setEntry(w);
+            entryChanged();
+        }
+        function entryChanged(){
+            ent = getEntry();
+            document.getElementById("aaa").innerHTML = getEntry();
+        }
+        window.addEventListener('popstate', () => {if(ent != getEntry())entryChanged();});
+        //popstate cannot detect pushstate so we need to call entryChanged after pushstate too
     </script>
 </body>
 </html>
