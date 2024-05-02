@@ -28,10 +28,11 @@
             entryChanged();
         }
         function entryChanged(){
+            if(ent == getEntry())return;
             ent = getEntry();
             document.getElementById("aaa").innerHTML = getEntry();
         }
-        window.addEventListener('popstate', () => {if(ent != getEntry())entryChanged();});
+        window.addEventListener('popstate', () => {entryChanged();});
         //popstate cannot detect pushstate so we need to call entryChanged after pushstate too
     </script>
 </body>
