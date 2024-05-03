@@ -49,7 +49,7 @@ const svgs = [
     "l",
     "m",
     "miang vyei", "miang",
-    "n", "ng",
+    "n", "ng", "ngh",
     "o", "ong",
     "p", "pf",
     "s", "sh", "syu_",
