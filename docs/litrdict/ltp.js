@@ -53,7 +53,7 @@ const svgs = [
     "o", "ong",
     "p", "pf",
     "s", "sh", "syu_",
-    "tf", "th", "tiu tran", "tr", "ts",
+    "t", "tf", "th", "tiu tran", "tr", "ts",
     "v", "vm",
     "x",
     "ye_a", "yen", "yo", "yu", "yy"
