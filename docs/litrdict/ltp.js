@@ -56,7 +56,7 @@ const svgs = [
     "t", "tf", "th", "tiu tran", "tr", "ts",
     "v", "vm",
     "x",
-    "ye_a", "yen", "yo", "yu", "yy"
+    "ya", "ye_a", "yen", "yo", "yu", "yy"
 ];
 const pngs = [
     "am", "ao",
