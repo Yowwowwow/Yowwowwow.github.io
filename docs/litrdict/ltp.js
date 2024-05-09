@@ -44,7 +44,7 @@ const svgs = [
     "gg",
     "ha_", "hau_ang", "he_",
     "i",
-    "j",
+    "j", "js",
     "k",
     "l", "lh",
     "m", "mh",
