@@ -1,6 +1,7 @@
 const reps = { //replacements
     "|":"ba.svg",
     "^B":"b_a.svg",
+    "fal":"cgu_.svg",
     "-":"do.svg",
     "@*":"dra kuyei.svg",
     "@":"dra.svg",
