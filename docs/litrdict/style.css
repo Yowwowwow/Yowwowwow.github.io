@@ -1,2 +1,3 @@
 .ltp img{pointer-events: none;}
 .ltp img[src$=".png"], .ltp img[src$=".jpg"]{filter: saturate(100) grayscale(1) contrast(3);}
+.ltp img[src$=".png"]::selection, .ltp img[src$=".jpg"]::selection{filter: saturate(100) grayscale(1) contrast(3);}
