@@ -12,6 +12,7 @@ const reps = { //replacements
     "7":"ga.svg",
     "~":"gepf.svg",
     "hau_ang*":"hau_ang kuyei.svg",
+    "^he_":"he_ kuyei.svg",
     "1-":"hiou do.svg",
     "1":"hiou.svg",
     "3-":"jyun do.svg",
@@ -25,6 +26,7 @@ const reps = { //replacements
     "6":"ping.svg",
     "^R":"q_wo.svg",
     "8":"sye.svg",
+    "^x":"x kuyei.svg",
 
     "v(":"v(coda).png",
     "ye(":"ye(variant).png",
@@ -57,6 +59,7 @@ const svgs = [
     "t", "tf", "th", "tiu tran", "tr", "ts",
     "u",
     "v", "vm",
+    "wh",
     "x",
     "ya", "ye_a", "yen", "yo", "yu", "yy"
 ];
