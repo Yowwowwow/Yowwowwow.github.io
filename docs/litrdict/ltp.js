@@ -26,6 +26,7 @@ const reps = { //replacements
     "6":"ping.svg",
     "^R":"q_wo.svg",
     "8":"sye.svg",
+    "^tiu tran":"tiu tran kuyei.svg",
     "^x":"x kuyei.svg",
 
     "v(":"v(coda).png",
@@ -61,7 +62,8 @@ const svgs = [
     "v", "vm",
     "wh",
     "x",
-    "ya", "ye_a", "yen", "yo", "yu", "yy"
+    "ya", "ye_a", "yen", "yo", "yu", "yy",
+    "zq"
 ];
 const pngs = [
     "am", "ao",
