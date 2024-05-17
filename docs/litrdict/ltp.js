@@ -17,6 +17,7 @@ const reps = { //replacements
     "1":"hiou.svg",
     "3-":"jyun do.svg",
     "3":"jyun.svg",
+    "l(":"l(coda).svg",
     "^r":"l_e.svg",
     "4-":"mu do.svg",
     "4":"mu.svg",
