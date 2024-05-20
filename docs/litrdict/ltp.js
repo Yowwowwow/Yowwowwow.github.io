@@ -1,4 +1,6 @@
 const reps = { //replacements
+    "[":"action mark open.svg",
+    "]":"action mark close.svg",
     "|":"ba.svg",
     "^B":"b_a.svg",
     "fal":"cgu_.svg",
@@ -15,6 +17,8 @@ const reps = { //replacements
     "^he_":"he_ kuyei.svg",
     "1-":"hiou do.svg",
     "1":"hiou.svg",
+    "¡":"imperative mark.svg",
+    "_!":"imperative mark.svg",
     "3-":"jyun do.svg",
     "3":"jyun.svg",
     "l(":"l(coda).svg",
@@ -28,6 +32,8 @@ const reps = { //replacements
     "^R":"q_wo.svg",
     "8":"sye.svg",
     "^tiu tran":"tiu tran kuyei.svg",
+    "¿":"whisper mark.svg",
+    "_?":"whisper mark.svg",
     "^x":"x kuyei.svg",
 
     "v(":"v(coda).png",
