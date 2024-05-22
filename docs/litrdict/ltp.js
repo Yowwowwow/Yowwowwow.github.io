@@ -11,6 +11,8 @@ const reps = { //replacements
     "+":"dsan.svg",
     " ":"dwua.svg",
     "e_*":"e_ kuyei.svg",
+    "､":"enumeration mark.svg",
+    "_,":"enumeration mark.svg",
     "5":"fo.svg",
     "7":"ga.svg",
     "~":"gepf.svg",
