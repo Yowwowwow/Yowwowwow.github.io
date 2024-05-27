@@ -54,7 +54,7 @@ const reps = { //replacements
 const svgs = [
     "a", "ai", "an", "ang", "au",
     "b", "bb",
-    "ch", "cs",
+    "ch", "cl", "cs",
     "d", "dd", "dh", "dhs", "dr",
     "e_", "en", "eng",
     "f", "fye",
@@ -63,7 +63,7 @@ const svgs = [
     "i",
     "j", "js",
     "k",
-    "l", "lh",
+    "l", "lb", "lbh", "lh",
     "m", "mh",
     "miang vyei", "miang",
     "n", "ng", "ngh",
