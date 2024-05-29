@@ -59,7 +59,7 @@ const svgs = [
     "e_", "en", "eng",
     "f", "fye",
     "gg",
-    "ha_", "hau_ang", "he_",
+    "ha_", "hau_ang", "he_", "hh",
     "i",
     "j", "js",
     "k", "kr",
