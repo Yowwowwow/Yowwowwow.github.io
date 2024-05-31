@@ -3,6 +3,7 @@ const reps = { //replacements
     "]":"action mark close.svg",
     "|":"ba.svg",
     "^B":"b_a.svg",
+    "^bo":"bo.svg",
     "fal":"cgu_.svg",
     ",":"comma.svg",
     "^-":"do kuyei.svg",
@@ -37,6 +38,7 @@ const reps = { //replacements
     ".":"period.svg",
     "6":"ping.svg",
     "^R":"q_wo.svg",
+    "^sang":"sang.svg",
     "8":"sye.svg",
     "^tiu tran":"tiu tran kuyei.svg",
     "¿":"whisper mark.svg",
@@ -54,7 +56,7 @@ const reps = { //replacements
 };
 const svgs = [
     "a", "ai", "an", "ang", "au",
-    "b", "bb",
+    "b", "bb", "bo",
     "ch", "cl", "cs",
     "d", "dd", "dh", "dhs", "dr",
     "e_", "en", "eng",
@@ -70,7 +72,7 @@ const svgs = [
     "o", "ong", "ou",
     "p", "pf",
     "r",
-    "s", "sh", "sr", "syu_",
+    "s", "sang", "sh", "sr", "syu_",
     "t", "tf", "th", "ths", "tiu tran", "tr", "ts",
     "u",
     "v", "vm",
