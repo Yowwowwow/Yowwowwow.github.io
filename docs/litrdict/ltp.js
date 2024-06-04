@@ -6,6 +6,7 @@ const reps = { //replacements
     "^bo":"bo.svg",
     "fal":"cgu_.svg",
     ",":"comma.svg",
+    "--":"dash.svg",
     "^-":"do kuyei.svg",
     "-":"do.svg",
     "^@":"dra kuyei.svg",
