@@ -41,6 +41,7 @@ const reps = { //replacements
     "^R":"q_wo.svg",
     "^sang":"sang.svg",
     "8":"sye.svg",
+    "^tau":"tau kuyei.svg",
     "^te_":"te_.svg",
     "^tiu tran":"tiu tran kuyei.svg",
     "¿":"whisper mark.svg",
