@@ -36,6 +36,7 @@ const reps = { //replacements
     "n(":"n(coda).svg",
     "2":"ne.svg",
     "=":"p_sa.svg",
+    "^=":"p_sa kuyei.svg",
     ".":"period.svg",
     "6":"ping.svg",
     "^R":"q_wo.svg",
