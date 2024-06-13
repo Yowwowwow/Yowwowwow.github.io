@@ -15,7 +15,7 @@
     </style>
     <body style="margin-top: 2px;">
         <p style="font-size: 24px; font-family: Arial, sans-serif; margin-top: 0; margin-bottom: 10px;">Base 14 and 10 converter</p>
-        <textarea id="input" oninput="convert()" placeholder="" style="width: 99%; height: 24vh; font-size: 24px; font-family: Arial, sans-serif;" spellcheck="false"></textarea>
+        <textarea id="input" oninput="convert()" onblur="seturl()" placeholder="" style="width: 99%; height: 24vh; font-size: 24px; font-family: Arial, sans-serif;" spellcheck="false"></textarea>
         <button id="swap" style="height: 40px; width: 60px;" onclick="Swap()">Swap</button>
         <span id="direction" style="font-family: Arial, sans-serif;">Base 10 → 14 (10 → <img src="assets/B14a10/1.svg" height="12px"><img src="assets/B14a10/0.svg" height="12px">)</span>
         <h6></h6>
@@ -68,14 +68,17 @@
                 }
                 ltp.innerHTML = ans;
             }
-            function convert(){
+            function seturl(){
                 let query = "?";
                 let s = inp.value;
-                let n = s.length;
                 if(dr!=0||s!=""){urlParams.set("to", 14-4*dr); query=query.concat("to=", 14-4*dr);}
                 if(s!=""){urlParams.set("input", s); query=query.concat((dr!=0||s!="")?"&input=":"input=", s);}
                 if(query==="?")query="";
                 history.replaceState({}, "", urlbase.concat(query));
+            }
+            function convert(){
+                let s = inp.value;
+                let n = s.length;
                 if(n==0){
                     oup.value = "";
                     litrpi("");
@@ -174,6 +177,7 @@
             function Swap(){
                 dr=(0==dr)?1:0;
                 txtdis.innerHTML = tarr[dr];
+                seturl();
                 convert();
             }
             if(urlParams.get("to")==="10")Swap();
