@@ -22,6 +22,8 @@
         <textarea disabled id="output" placeholder="" style="width: 99%; height: 24vh; font-size: 24px; font-family: Arial, sans-serif;"></textarea>
         <div id="ltp"></div>
         <script>
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlbase = [location.protocol, '//', location.host, location.pathname].join('');
             var dr=0;
             const tarr = [
                 'Base 10 → 14 (10 → <img src="assets/B14a10/1.svg" height="12px"><img src="assets/B14a10/0.svg" height="12px">)',
@@ -67,8 +69,13 @@
                 ltp.innerHTML = ans;
             }
             function convert(){
+                let query = "?";
                 let s = inp.value;
                 let n = s.length;
+                if(dr!=0||s!=""){urlParams.set("to", 14-4*dr); query=query.concat("to=", 14-4*dr);}
+                if(s!=""){urlParams.set("input", s); query=query.concat((dr!=0||s!="")?"&input=":"input=", s);}
+                if(query==="?")query="";
+                history.replaceState({}, "", urlbase.concat(query));
                 if(n==0){
                     oup.value = "";
                     litrpi("");
@@ -169,6 +176,8 @@
                 txtdis.innerHTML = tarr[dr];
                 convert();
             }
+            if(urlParams.get("to")==="10")Swap();
+            if(urlParams.get("input")!==null){inp.value=urlParams.get("input"); convert();}
         </script>
     </body>
 </html>
