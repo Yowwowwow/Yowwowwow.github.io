@@ -63,7 +63,7 @@ const svgs = [
     "b", "bb", "bo",
     "ch", "cl", "clh", "cs",
     "d", "dd", "dh", "dhs", "dr", "ds",
-    "e_", "en", "eng",
+    "e", "e_", "en", "eng",
     "f", "fye",
     "gg",
     "h", "ha_", "hau_ang", "he_", "hh",
