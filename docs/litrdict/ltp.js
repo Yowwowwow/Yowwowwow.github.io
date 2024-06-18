@@ -83,7 +83,7 @@ const svgs = [
     "v", "vm",
     "wh",
     "x",
-    "ya", "ye_a", "yen", "yo", "yu", "yy",
+    "ya", "ye_a", "yei", "yen", "yo", "yu", "yy",
     "zq"
 ];
 const pngs = [
