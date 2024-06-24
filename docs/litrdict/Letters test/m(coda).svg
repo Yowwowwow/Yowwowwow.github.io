@@ -1,6 +1,0 @@
-<!-- Made by lì tŕ, for displaying lì tŕ pí symbols. -->
-<!-- Size should be 110*110, while glyphs only use points in the 100*100 square in the middle. -->
-<svg height="110" width="110" xmlns="http://www.w3.org/2000/svg">
-  <path d="M90 5 V45 L55 7.5 C55 30 61 60.1034482759 66 74.5 71.8 91.2 83.3 98.8666666667 92.5 105 L17.5 55"
-  fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
-</svg>
