@@ -9,6 +9,9 @@ function getEntry(){
 function getTesttxt(func){
     fetch("test.txt").then(x => x.text()).then(y => func(y));
 }
+function gettxt(file, func){
+    fetch(file.concat(".txt")).then(x => x.text()).then(y => func(y));
+}
 function setEntry(w){
     const s = window.location.href;
     let start = s.length;

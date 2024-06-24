@@ -110,9 +110,9 @@ const jpgs = [
     "wa", "wb", "wp",
     "zf", "zl", "zn", "zp", "zr", "zv", "zwf"
 ];
-function parseltp(){
-    const ltps = document.getElementsByClassName("ltp");
-    const height = "24px";
+function parseltp(tar=0, height="24px"){
+    const ltps = (tar==0)?document.getElementsByClassName("ltp"):tar;
+    //const height = "24px";
     for(let fieldcount=0;fieldcount<ltps.length;fieldcount++){
         let s = ltps[fieldcount].innerHTML;
         const seps = s.split(';');

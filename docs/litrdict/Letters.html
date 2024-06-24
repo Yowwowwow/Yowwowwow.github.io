@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html style="font-family: Roboto, Arial, sans-serif;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="lì tŕ pí dictionary.">
+<title>litrdict</title>
+<link rel="shortcut icon" href="images/icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+</style>
+<body>
+    <div id="content" style="display: none;">
+        a; a; ä
+        ai; ai; äi
+        am; am; äm
+        an; an; än
+        ang; ang; äŋ
+        ao; ao; äo̞
+        au; au; äu
+        b; b; p
+        bb; bb; ɓ̩̚/ ~ /b̩̚
+        cg; cg; ʔ
+        ch; ch; t͡ɕʰ
+        ck; ck; ʔʰ
+        cl; cl; ʎ
+        clh; clh; ʎ̝̊
+        cn; cn; ɲ
+        cr; cr; ɹ̠
+        cs; cs; ç
+        d; d; t
+        db; db; t̼
+        dd; dd; ɗ̩̚/ ~ /d̩̚
+        dh; dh; ð̪͆
+        dhs; dhs; t̪͆͡θ̪͆
+        dr; dr; t̺͡ʃ̺
+        drr; drr; ʈ̠͡ʂ̠
+        ds; ds; t̪͡s̪
+        e; e; ə
+        e_; e˞; ɚ
+        ei; ei; əi
+        em; em; əm
+        en; en; ən
+        eng; eng; əŋ
+        eu; eu; əu
+        f; f; f
+        fp; fp; p̪ʰ
+        g; g; k
+        gg; gg; ɠ̩̚/ ~ /ɡ̩̚
+        h; h; h
+        hh; hh; ʜ
+        i; i; i
+        j; j; t͡ɕ
+        js; js; z̪
+    </div>
+    <div id="display"></div>
+    <p class="ltp">
+    </p>
+    <script src="ltp.js"></script>
+    <script src="app.js"></script>
+    <script>
+        var display = document.getElementById("display");
+        function DispAdd(s){display.innerHTML=display.innerHTML.concat(s);}
+        var content = document.getElementById("content");
+        var cont = content.innerHTML;
+        var lines = cont.split("\n");
+        for(let i=1;i<lines.length-1;i++){
+            let elems = lines[i].split("; "); if(elems.length!=3)continue;
+            //for(let j=0;j<elems.length;j++)alert(`${j}: ${elems[j]}`);
+            DispAdd(`<span class="ltp">;${elems[0].replace(/ /g, '')}</span> &lt;${elems[1]}&gt; ${elems[2][0]=='%'?elems[2].substring(1):"/".concat(elems[2], "/")}<br>`);
+        }
+        parseltp();
+    </script>
+</body>
+</html>
