@@ -33,6 +33,7 @@ const reps = { //replacements
     "^r":"l_e.svg",
     "m(":"m(coda).svg",
     "^mhu":"mhu.svg",
+    "miang(":"miang vyei.svg",
     "4-":"mu do.svg",
     "4":"mu.svg",
     "n(":"n(coda).svg",
@@ -64,7 +65,7 @@ const reps = { //replacements
 };
 const svgs = [
     "a", "ai", "an", "ang", "au",
-    "b", "bb", "bo",
+    "b", "b_ga", "bb", "bo",
     "ch", "cl", "clh", "cs",
     "d", "dd", "dh", "dhs", "dr", "drr", "ds",
     "e", "e_", "en", "eng",
