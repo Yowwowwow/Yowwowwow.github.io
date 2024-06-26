@@ -106,7 +106,7 @@
         vb; vb; p̪
         vm; vm; ɱ
         wa; wa; æ
-        wb; wb; %/p(outer-labial)/ (Expalanation of outer-labial sounds in lì tŕ pí (this should be a link))
+        wb; wb; %/p(outer-labial)/ (Explanation of outer-labial sounds in lì tŕ pí (this should be a link))
         we; we; %/ə̠̹/ (/ə/ ~ /o̞/)
         wf; wf; f(outer-labial)
         wh; wh; %whistle(egressive, "voiced")
@@ -180,10 +180,28 @@
         ^tau; ꜝ; %reverse the diacritic/letter preceding this (e.g. <span class="ltp">;^te_;^tau</span> = tenuis)
         ye_a; /; %has two letters on its top-left and bottom-right;&nbsp;represents a sound between the sounds the two letters make
         b_ga; ∪; %has two letters on its top-right and bottom-left;&nbsp;represents a double articulation of them
+        endtrill; ″; %put after a trill consonant to indicate the trill ends here
         miang; 𝅘𝅥; %means the syllable is merely a transcription of a sound and is meaningless
         miang(; 𝅘𝅥; %same as <span class="ltp">;miang</span>;&nbsp;is the old form of it
+        fliplips; wb͇; %while pronouncing this outer-labial consonant, quickly flip lips back to normal positions
+        upperlip; a̬; %when pronouncing this vowel, retract upper lip so it wraps over upper teeth
+        lowerlip; a̭; %when pronouncing this vowel, retract lower lip so it wraps over lower teeth
+        bothlips; a̬̭; %when pronouncing this vowel, retract both lips so they wrap over teeth
+        hau_ang; ^; %put between two syllables to indicate they should be read together and take the time of only one regular syllable
+        ^hau_ang; ^; %same as <span class="ltp">;hau_ang</span>
+        <br>
+        dwua;  ; %Put between words to separate them, similar to white space in English.
+        ,; ,; %The comma. Can also be put after exclamation, whisper, imperative, question marks, like this: Yes!, I know it!
+        .; .; %The period.
+        ､; ､; %The enumeration mark. E.g. You can only buy 2､ 3､ 4､ 6､ 8 or 12 cans of this at once.
+        (MISSING); !; %The exclamation mark.
+        ¿; ¿; %The whisper mark. E.g. I said I didn't do it, ...didn't say I didn't tell someone else to do it¿
+        ¡; ¡; %The imperative mark. E.g. Never do it again¡
+        (MISSING); ?; %The question mark.
+        --; --; %The dash. (EXPLANATION NEEDED)
+        [;]; []; %The opening and closing action marks. E.g. Farewell. [Pulls trigger]
     </div>
-    <div id="display"></div>
+    <div id="display" style="font-size: 24px;"></div>
     <p class="ltp">
     </p>
     <script src="ltp.js"></script>
@@ -195,13 +213,13 @@
         var cont = content.innerHTML;
         var lines = cont.split("\n");
         for(let i=1;i<lines.length-1;i++){
-            let elems = lines[i].split("; "); if(elems.length!=3 && elems.length!=4)continue;
+            let elems = lines[i].split("; "); if(elems.length!=3 && elems.length!=4){DispAdd(lines[i]); continue;}
             //for(let j=0;j<elems.length;j++)alert(`${j}: ${elems[j]}`);
             DispAdd(`<span class="ltp">;${elems[0].replace(/ /g, '')}</span> &lt;${elems[1]}&gt; ${elems[2][0]=='%'?elems[2].substring(1):"/".concat(elems[2], "/")}`);
             if(elems.length>=4)DispAdd(` (<span class="ltp">;${elems[3]}</span>)`)
             DispAdd("<br>");
         }
-        parseltp();
+        parseltp(0, "24px");
     </script>
 </body>
 </html>

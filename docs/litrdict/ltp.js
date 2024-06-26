@@ -14,6 +14,7 @@ const reps = { //replacements
     "^+":"dsan kuyei.svg",
     "+":"dsan.svg",
     " ":"dwua.svg",
+    "dwua":"dwua.svg",
     "^e_":"e_ kuyei.svg",
     "e_*":"e_ kuyei.svg",
     "､":"enumeration mark.svg",
@@ -135,4 +136,4 @@ function parseltp(tar=0, height="24px"){
         ltps[fieldcount].innerHTML = ans;
     }
 }
-parseltp();
+//parseltp();
