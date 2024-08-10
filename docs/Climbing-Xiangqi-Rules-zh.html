@@ -1,0 +1,107 @@
+<!-- SUS SUS SUS SUS SUS SUS SUS -->
+<!DOCTYPE html>
+<html style="font-family: Roboto, Arial, sans-serif;">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="攀爬棋遊戲說明">
+<title>攀爬棋說明</title>
+<link rel="shortcut icon" href="assets/CX icon.png">
+</head>
+<style>h1{font-size:40px;}p{font-size:24px;}haha{font-weight: normal;font-size:24px;}
+sec{font-size:36px;}mid{font-size:32px;}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+img {
+    width: 225px;
+    /*max-width: 150px;
+    max-height:150px;*/
+    aspect-ratio: 1/1;
+    float: left;
+}
+.text {
+    font-size: 24px;
+    padding-left: 24px;
+    padding-top: 0%;
+    float: left;
+}
+.line {
+  margin:5px 0;
+  height:2px;
+  background:
+    repeating-linear-gradient(90deg,#1f2328 0 10px,#0000 0 12px)
+}
+a:link { color: #0000EE; }
+a:visited { color: #551A8B; }
+* {
+  color: #1f2328
+}
+</style>
+<body style="margin:20px">
+<h1><b>攀爬棋：操作說明與規則<span style="font-weight: normal; padding-left: 20px; font-size: 20px;">English version: <a href="https://yowwowwow.github.io/Climbing-Xiangqi-Rules">https://yowwowwow.github.io/Climbing-Xiangqi-Rules</a></span></b><br/><p><span style="font-weight:normal">遊戲連結：<a href="https://yowwowwow.github.io/Climbing-Xiangqi">https://yowwowwow.github.io/Climbing-Xiangqi</a></span></p></h1>
+<mid><b>• 操作</b></mid>
+<p>• 左鍵按住空白處(或右鍵按住任意處)並拖曳以調整攝影機角度。<br/>
+    • 把已翻開的棋子按住並往上拉可以看其底下的棋子。<br/>
+    • 點擊一顆蓋著的棋子後按FLIP按鈕可將其翻開。<br/>
+    • 點擊一顆已翻開的棋子，然後點擊目的地，再按MOVE按鈕則可移動棋子。<br/>
+    • 點擊一顆已翻開的棋子，然後點擊要吃的棋子，再按TAKE按鈕則可吃棋。
+</p>
+<div class="line"></div>
+<p></p>
+<sec><b>遊戲規則</b></sec><p></p>
+<mid><b>• 介紹</b></mid>
+<p>攀爬棋(Climbing Xiangqi、pān pá chí)是一種象棋的變種，類似暗棋。由lì tŕ(和其朋友)創作而成。<br/>
+    此遊戲使用4*4的方格棋盤，以及一般象棋的全部32顆棋子。
+</p>
+<mid><b>• 棋子種類</b></mid>
+<p>有2種顏色各7種棋：(依等級由高到低排列)<br/>
+1. <span style="color:red">帥</span>/<span style="color:black">將</span>：各1<br/>
+2. <span style="color:red">仕</span>/<span style="color:black">士</span>：各2<br/>
+3. <span style="color:red">相</span>/<span style="color:black">象</span>：各2<br/>
+4. <span style="color:red">俥</span>/<span style="color:black">車</span>：各2<br/>
+5. <span style="color:red">傌</span>/<span style="color:black">馬</span>：各2<br/>
+6. <span style="color:red">炮</span>/<span style="color:black">砲</span>：各2<br/>
+7. <span style="color:red">兵</span>/<span style="color:black">卒</span>：各5<br/>
+</p>
+<mid><b>• 初始設置</b></mid>
+<p>
+    • 把全部32顆棋蓋起並洗牌，然後在棋盤16格中每格疊2顆棋子。
+</p>
+<mid><b>• 遊戲流程</b></mid>
+<p>
+    • 一開始先手先翻開一顆棋。此棋的顏色就是先手的，而另一個顏色則是後手的。<br/>
+    • 兩玩家輪流進行回合。每回合，回合玩家必須翻開一顆棋，或是移動一顆自己的棋，有沒有吃子皆可。<br/>
+    • 輪到自己時，若自己無步可走則輸，而對手贏。(只要還有步可以走就不算輸，即使自己16顆棋都已被吃。)<br/>
+    • 因此，玩家應嘗試吃掉或「踩」上對手的棋子，以減少對手能走的棋步，進而取得勝利。
+</p>
+<mid><b>• 棋子走法</b></mid>
+<p>
+    • 只有每格中最上面的棋子可被翻開、移動或吃掉。<br/>
+    • 不吃子時，所有棋走法相同。<br/>
+    • 每顆棋移動(非吃子)時，其可移動到上、下、左、右的相鄰格子中其中一格的頂端，但移動時最多只能往上或往下一層，或待在同一層。<!--
+    -->意即，如果移動前和移動後棋子所在高度會相差2層以上的話就不能走這步。<br/>
+    • 棋子最多只能疊3層。同一格不可疊4顆以上的棋子。
+</p>
+<mid><b>• 棋子吃法</b></mid>
+<p>
+    • 吃棋時，把要被吃的棋移除，把吃棋的棋移到被吃的棋原本所在處。<br/>
+    • 所有棋只能吃和自己不同顏色的棋。(只能吃對手的棋，不能吃自己的棋。)<br/>
+    • 所有棋只能吃和自己在同一層(所在處高度相同)的棋。<br/>
+    • <span style="color:red">帥</span>/<span style="color:black">將</span>能吃<span style="color:red">兵</span>/<span style="color:black">卒</span>以外所有棋。<br/>
+    • <span style="color:red">仕</span>/<span style="color:black">士</span>、<span style="color:red">相</span>/<span style="color:black">象</span>、<!--
+    --><span style="color:red">俥</span>/<span style="color:black">車</span>、<span style="color:red">傌</span>/<span style="color:black">馬</span>只能吃等級和自己相同或比自己低的棋。<br/>
+    • <span style="color:red">炮</span>/<span style="color:black">砲</span>能吃所有棋。(但吃子時走法和其他棋不同。)<br/>
+    • <span style="color:red">兵</span>/<span style="color:black">卒</span>只能吃<span style="color:red">帥</span>/<span style="color:black">將</span>和<span style="color:red">兵</span>/<span style="color:black">卒</span>。<br/>
+    • 除<span style="color:red">炮</span>/<span style="color:black">砲</span>，所有棋吃子時走法和不吃子時一樣，只是只能吃和自己同層的棋。<br/>
+    • <span style="color:red">炮</span>/<span style="color:black">砲</span>能且只能吃和自己在同一行或同一列的棋，只要滿足以下條件：<br/>
+    &nbsp;&nbsp;1. 要被吃的棋和要吃棋的<span style="color:red">炮</span>/<span style="color:black">砲</span>在同一層。<br/>
+    &nbsp;&nbsp;2. 在要被吃的棋和要吃棋的<span style="color:red">炮</span>/<span style="color:black">砲</span>之間，最頂端的棋所在高度<!--
+    -->高於或等於要吃棋的<span style="color:red">炮</span>/<span style="color:black">砲</span>的格子數恰好為1。
+</p>
+<p>大概就這樣。祝遊玩愉快！</p>
+<!--<p style="color: #FF0000"><b>wvcme </b>mevmvm</p>-->
+</body>
+</html>
