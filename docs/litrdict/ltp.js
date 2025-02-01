@@ -3,6 +3,7 @@ const reps = { //replacements
     "]":"action mark close.svg",
     "|":"ba.svg",
     "^B":"b_a.svg",
+    "^ba":"b_a2.svg",
     "^bo":"bo.svg",
     "fal":"cgu_.svg",
     ",":"comma.svg",
