@@ -42,6 +42,8 @@ const reps = { //replacements
     "2":"ne.svg",
     "=":"p_sa.svg",
     "^=":"p_sa kuyei.svg",
+    "(":"parenthesis open.svg",
+    ")":"parenthesis close.svg",
     ".":"period.svg",
     "6":"ping.svg",
     "^R":"q_wo.svg",
@@ -65,6 +67,9 @@ const reps = { //replacements
     "bothlips":"抿雙脣.jpg",
     "fliplips":"翻脣.jpg"
 };
+const verticals = [
+    " "
+];
 const svgs = [
     "a", "ai", "an", "ang", "au",
     "b", "b_ga", "bb", "bo",
@@ -116,22 +121,30 @@ const jpgs = [
     "wa", "wb", "wp",
     "zf", "zl", "zn", "zp", "zr", "zv", "zwf"
 ];
-function parseltp(tar=0, height="24px"){
+function parseltp(tar=0, height="24px", ori="h"){
     const ltps = (tar==0)?document.getElementsByClassName("ltp"):tar;
     //const height = "24px";
     for(let fieldcount=0;fieldcount<ltps.length;fieldcount++){
         let s = ltps[fieldcount].innerHTML;
         const seps = s.split(';');
         let ans = "";
+        let maybevert = "";
+        let worh = ori=="v" ? "width" : "height";
         for(let i=0;i<seps.length;i++){
-            if(seps[i] in reps){
-                let tmp = reps[seps[i]].slice(reps[seps[i]].length-3).concat("s");
-                ans = ans.concat(`<img src="${tmp}/${reps[seps[i]]}" height="${height}">`);
+            if(ori=="v" && verticals.includes(seps[i])){ //vertical text
+                maybevert = "/vertical";   
             }
-            else if(svgs.includes(seps[i]))ans = ans.concat(`<img src="svgs/${seps[i]}.svg" height="${height}">`);
-            else if(pngs.includes(seps[i]))ans = ans.concat(`<img src="pngs/${seps[i]}.png" height="${height}">`);
-            else if(jpgs.includes(seps[i]))ans = ans.concat(`<img src="jpgs/${seps[i]}.jpg" height="${height}">`);
-            else if(seps[i].length>4 && seps[i].slice(seps[i].length-4)=='.')ans.concat(`<img src="misc/${seps[i]}" height="${height}">`);
+            else{
+                maybevert = "";
+            }
+            if(seps[i] in reps){
+                let tmp = reps[seps[i]].slice(reps[seps[i]].length-3).concat("s"); //file type (3 chars) + "s", i.e. svgs, pngs, jpgs.
+                ans = ans.concat(`<img src="${tmp}${maybevert}/${reps[seps[i]]}" ${worh}="${height}">`);
+            }
+            else if(svgs.includes(seps[i]))ans = ans.concat(`<img src="svgs${maybevert}/${seps[i]}.svg" ${worh}="${height}">`);
+            else if(pngs.includes(seps[i]))ans = ans.concat(`<img src="pngs${maybevert}/${seps[i]}.png" ${worh}="${height}">`);
+            else if(jpgs.includes(seps[i]))ans = ans.concat(`<img src="jpgs${maybevert}/${seps[i]}.jpg" ${worh}="${height}">`);
+            else if(seps[i].length>4 && seps[i].slice(seps[i].length-4)=='.')ans.concat(`<img src="misc${maybevert}/${seps[i]}" ${worh}="${height}">`);
             else ans = ans.concat(seps[i]);
         }
         ltps[fieldcount].innerHTML = ans;
