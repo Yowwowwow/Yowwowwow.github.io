@@ -39,25 +39,7 @@
             RefreshNumbers();
             function CheckEndings(){
                 let s = score.toString(36).toUpperCase();
-                if(s=="CTS")ending.innerHTML = "CTS: Checkers Truce Simple";
-                else if(s=="-CTS")ending.innerHTML = "CTS: NEGATIVE EDITION";
-                else if(s=="CBA")ending.innerHTML = "CBA: Chess Battle Advanced";
-                else if(s=="-CBA")ending.innerHTML = "CBA: NEGATIVE EDITION";
-                else if(s=="BTI")ending.innerHTML = "BTI: Backgammon Tension Intermediate";
-                else if(s=="-BTI")ending.innerHTML = "BTI: NEGATIVE EDITION";
-                else if(s=="A")ending.innerHTML = "wow you got an A";
-                else if(s=="-A")ending.innerHTML = "uhh idk -A";
-                else if(s=="D")ending.innerHTML = "D for D: DDD:::";
-                else if(s=="-D")ending.innerHTML = "-D:";
-                else if(s=="HESS")ending.innerHTML = "HESS that's very hess of you hess hess hess";
-                else if(s=="-HESS")ending.innerHTML = "not hess??? hwaat?? D::";
-                else if(s=="ZERO")ending.innerHTML = "this is not 0";
-                else if(s=="-ZERO")ending.innerHTML = "this is not -0";
-                else if(s=="CBAD")ending.innerHTML = "CBAD: Chess Battle Advanced Development";
-                else if(s=="-CBAD")ending.innerHTML = "CBAD: NEGATIVE EDITION";
-                else if(s=="COW")ending.innerHTML = "🐄";
-                else if(s=="-COW")ending.innerHTML = "➖🐄";
-                else ending.innerHTML = "";
+                if(s in dict)ending.innerHTML = dict[s]; else ending.innerHTML = "";
             }
             function RefreshNumbers(){
                 acts[0] = BigInt(1 + Math.floor(Math.random() * 9));
@@ -77,6 +59,28 @@
             function Minus(){score-=acts[1]; NextTurn();}
             function Multiply(){score*=acts[2]; NextTurn();}
             function Divide(){score/=acts[3]; NextTurn();}
+            const dict = {
+                "CTS":"CTS: Checkers Truce Simple",
+                "-CTS":"CTS: NEGATIVE EDITION",
+                "CBA":"CBA: Chess Battle Advanced",
+                "-CBA":"CBA: NEGATIVE EDITION",
+                "BTI":"BTI: Backgammon Tension Intermediate",
+                "-BTI":"BTI: NEGATIVE EDITION",
+                "A":"wow you got an A",
+                "-A":"uhh idk -A",
+                "D":"D for D: DDD:::",
+                "-D":"-D:",
+                "HESS":"HESS that's very hess of you hess hess hess",
+                "-HESS":"not hess??? hwaat?? D::",
+                "ZERO":"this is not 0",
+                "-ZERO":"this is not -0",
+                "CBAD":"CBAD: Chess Battle Advanced Development",
+                "-CBAD":"CBAD: NEGATIVE EDITION",
+                "COW":"🐄",
+                "-COW":"➖🐄",
+                "FROG":"🐸",
+                "-FROG":"🐸 is kil....... no"
+            };
         </script>
     </body>
 </html>
