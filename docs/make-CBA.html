@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="try to make CBA (or something else??)">
+        <title>make CBA</title>
+        <link rel="icon" href="assets/CBATRUE.png">
+    </head>
+    <style>
+        textarea{resize: none; background: white;}
+        h6{font-size: 1.8px;}
+
+        img{pointer-events: none;}
+    </style>
+    <body style="margin-top: 2px;">
+        <p style="font-size: 24px; font-family: Arial, sans-serif; margin-top: 0; margin-bottom: 10px;">make CBA</p>
+        <p id="score" style="font-size: 48px; font-family: Arial, sans-serif;">0</p>
+        <button id="plus" style="font-size: 20px; height: 40px; width: 60px;" onclick="Plus()"></button>
+        <button id="minus" style="font-size: 20px; height: 40px; width: 60px;" onclick="Minus()"></button>
+        <button id="multiply" style="font-size: 20px; height: 40px; width: 60px;" onclick="Multiply()"></button>
+        <button id="divide" style="font-size: 20px; height: 40px; width: 60px;" onclick="Divide()"></button>
+        <span id="moves" style="font-size: 24px; font-family: Arial, sans-serif; margin-left: 10px;">Moves: 0</span>
+        <h6></h6>
+        <p id="ending" style="font-size: 48px; font-family: Arial, sans-serif;"></p>
+        <script>
+            let buttons = [0,0,0,0]; //plus, minus, mult, divide
+            const signs = ['+', '-', '×', '÷'];
+            buttons[0] = document.getElementById("plus");
+            buttons[1] = document.getElementById("minus");
+            buttons[2] = document.getElementById("multiply");
+            buttons[3] = document.getElementById("divide");
+            let disp = document.getElementById("score");
+            let mvcount = document.getElementById("moves");
+            let ending = document.getElementById("ending");
+            let score = 0n;
+            let moves = 0n;
+            let acts = [3n,3n,3n,3n];
+            RefreshNumbers();
+            function CheckEndings(){
+                let s = score.toString(36).toUpperCase();
+                if(s=="CTS")ending.innerHTML = "CTS: Checkers Truce Simple";
+                else if(s=="-CTS")ending.innerHTML = "CTS: NEGATIVE EDITION";
+                else if(s=="CBA")ending.innerHTML = "CBA: Chess Battle Advanced";
+                else if(s=="-CBA")ending.innerHTML = "CBA: NEGATIVE EDITION";
+                else if(s=="BTI")ending.innerHTML = "BTI: Backgammon Tension Intermediate";
+                else if(s=="-CBA")ending.innerHTML = "BTI: NEGATIVE EDITION";
+                else if(s=="A")ending.innerHTML = "wow you got an A";
+                else if(s=="-A")ending.innerHTML = "uhh idk -A";
+                else if(s=="D")ending.innerHTML = "D for D: DDD:::";
+                else if(s=="-D")ending.innerHTML = "-D:";
+                else ending.innerHTML = "";
+            }
+            function RefreshNumbers(){
+                acts[0] = BigInt(1 + Math.floor(Math.random() * 9));
+                acts[1] = BigInt(1 + Math.floor(Math.random() * 9));
+                acts[2] = BigInt(2 + Math.floor(Math.random() * 8));
+                acts[3] = BigInt(2 + Math.floor(Math.random() * 8));
+                for(let i=0;i<4;i++)buttons[i].innerHTML = signs[i] + acts[i];
+            }
+            function NextTurn(){
+                disp.innerHTML = score.toString(36).toUpperCase();
+                CheckEndings();
+                RefreshNumbers();
+                moves += 1n;
+                mvcount.innerHTML = "Moves: " + moves;
+            }
+            function Plus(){score+=acts[0]; NextTurn();}
+            function Minus(){score-=acts[1]; NextTurn();}
+            function Multiply(){score*=acts[2]; NextTurn();}
+            function Divide(){score/=acts[3]; NextTurn();}
+        </script>
+    </body>
+</html>
