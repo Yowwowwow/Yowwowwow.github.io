@@ -1,0 +1,11 @@
+<!-- Made by lì tŕ -->
+<svg height="110" width="110" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.5 15 L42.5 5 33 30 C61.6 19.3 63 49 35 75"
+  fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+  <path d="M5 52.5 L25 45 15 69 44 43"
+  fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+  <path d="M90 5 Q94 5 94 13 C94 32 80 71 68 71 56 71 60 51 71 51 82 51 96 66 105 72.7"
+  fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+  <path d="M17.5 80 L5 105 C35 77 55 105 67 105 69 105 72 102 72 97 72 87 57.825 76.71 90 81 L105 83 93 97"
+  fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+</svg>
