@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Backgammon Tension Intermediate: Deluxe Edition">
+        <title>BTI:DE</title>
+        <link rel="icon" href="assets/BTIm/btide.png">
+    </head>
+    <style>
+        textarea{resize: none; background: white;}
+        h6{font-size: 1.8px;}
+
+        img{pointer-events: none;}
+    </style>
+    <body style="margin-top: 2px;">
+        <audio id="bgm" loop><source src="assets/BTIm/BackGamMon.mp3" type="audio/mp3"></audio>
+        <p id="title" style="font-size: 36px; font-family: Arial, sans-serif; margin-top: 0; margin-bottom: 10px; color: #808080; text-align: center;">Backgammon Tension Intermediate: Deluxe Edition</p>
+        <img id="bo" src="assets/BTIm/bo.png" height="540px" style="display: block; margin: auto;"><br>
+        <div id="start" style="align-items: center; justify-content: center; display: flex;"><button style="font-size: 20px; height: 60px; width: 120px;" onclick="Start()">Start</button></div>
+        <script>
+            var bo = document.getElementById("bo");
+            var time = 0;
+            function Start(){
+                document.body.style.backgroundColor = "black";
+                document.getElementById("start").remove();
+                document.getElementById("bgm").play();
+                bo.src = "assets/BTIm/evbo.png";
+                var t = document.getElementById("title");
+                t.innerHTML = "Backgammon Tension Impostor";
+                t.style.color = "#7f7f7f";
+                setTimeout(function() { Uhh(); }, 30);
+            }
+            function Uhh(){
+                time+=30;
+                bo.style.filter = `brightness(${1.33+Math.sin(time/500)/3})`;
+                setTimeout(function() { Uhh(); }, 30);
+            }
+        </script>
+    </body>
+</html>
