@@ -21,5 +21,6 @@ def Main(filename: str):
     s = re.sub(g1, "</g></svg>", s)
     ans = open(fname+"_ol.svg", "w")
     ans.write(s)
-l = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D"]
-for i in l: Main(i)
+# l = ["0","1","2","3","4","5","6","7","8","9","A","B","C","D"]
+# for i in l: Main(i)
+Main("minus")
