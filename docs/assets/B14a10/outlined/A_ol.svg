@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Made by lì tŕ, for displaying lì tŕ pí symbols. -->
+
+<!-- Size should be 110*110, while glyphs only use points in the 100*100 square in the middle. -->
+
+<svg
+   height="115"
+   width="115"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="A.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="true"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="4"
+     inkscape:cx="66.624999"
+     inkscape:cy="31.375"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     d="M 97.49966,7.4934476 C 73.842969,14.344228 55.670137,29.82438 44.694998,38.670953 21.901614,57.043688 42.958963,75.318614 61.499658,58.41848 85.153319,36.857797 54.65686,19.529781 19.730333,62.227832 16.185864,66.560983 -1.2228564,87.232829 13.025291,98.867634 29.779076,112.5485 78.33533,107.61572 107.49966,100.11572"
+     fill="none"
+     opacity="1"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="10"
+     id="path1-0"
+     sodipodi:nodetypes="cssssc"
+     style="stroke:#ffffff;stroke-width:15;stroke-dasharray:none;stroke-opacity:1" />
+  <path
+     d="M 97.499659,7.4934484 C 73.842971,14.344228 55.670138,29.82438 44.694999,38.670953 21.901616,57.043688 42.958964,75.318614 61.499659,58.41848 85.153321,36.857797 54.656861,19.529781 19.730334,62.227832 c -3.544469,4.333151 -20.9531888,25.004997 -6.705042,36.639802 16.753785,13.680866 65.31004,8.748086 94.474368,1.248086"
+     fill="none"
+     opacity="1"
+     stroke="#000000"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     stroke-width="10"
+     id="path1"
+     sodipodi:nodetypes="cssssc" />
+</svg>
