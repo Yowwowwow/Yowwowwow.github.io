@@ -1,0 +1,6 @@
+<!-- Made by lì tŕ -->
+<svg height="330" width="530" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(15 15) scale(5 3)" fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="30">
+  <path d="M0 0 V100 H100" vector-effect="non-scaling-stroke"/>
+  <path d="M50 0 V100" vector-effect="non-scaling-stroke"/>
+</g></svg>
