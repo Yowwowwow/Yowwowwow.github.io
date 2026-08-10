@@ -82,7 +82,7 @@ const svgs = [
     "h", "ha_", "hau_ang", "he_", "hh",
     "i",
     "j", "jh", "js",
-    "k", "klk", "kr",
+    "k", "kh", "klk", "kr",
     "l", "lb", "lbh", "lh", "lk",
     "m", "mh", "mhu", "miang vyei", "miang",
     "n", "ng", "ngh", "nq",

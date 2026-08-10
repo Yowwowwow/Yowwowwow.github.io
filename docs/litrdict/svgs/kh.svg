@@ -1,0 +1,9 @@
+<!-- Made by lì tŕ, for displaying lì tŕ pí symbols. -->
+<svg height="110" width="110" xmlns="http://www.w3.org/2000/svg">
+  <path d="M76.8 5 C59.1 90.3 39.6 77.2 39.6 50.8"
+  fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+  <path d="M48.6 18.7 C67.7 22.2 84.4 82 67.3 105"
+  fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+  <path d="M92.5 59.6 C61.5 31.12248062 41.2 31.2 17.5 44.4"
+  fill="none" opacity="1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+</svg>
