@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Uhh numbers.">
+        <title>uhh numbers</title>
+        <link rel="icon" href="assets/uhhnums/3.png">
+    </head>
+    <style>
+        textarea{resize: none; background: white;}
+        h6{font-size: 1.8px;}
+    </style>
+    <body style="margin-top: 2px;">
+        <p style="font-size: 24px; font-family: Arial, sans-serif; margin-top: 0; margin-bottom: 10px;">uhh numbers</p>
+        <textarea id="input" oninput="convert()" placeholder="" style="width: 99%; height: 36vh; font-size: 24px; font-family: Arial, sans-serif;" spellcheck="false"></textarea>
+        <button id="reverse" style="height: 40px; width: 60px;" onclick="reverse()">reverse</button>
+        <h6></h6>
+        <div id="output" style="line-height: 0.1;"></div>
+        <script>
+            const inp = document.getElementById("input");
+            const oup = document.getElementById("output");
+            function pic(s){return `<img src="assets/uhhnums/${s}.png" style="height: 32px; margin: -1px;">`;}
+            function convert(){
+                let s = inp.value;
+                let ans = "";
+                for(let i=0;i<s.length;i++){
+                    if(s[i]=='\n')ans+='<br>';
+                    else if(/[0-9]/.test(s[i]))ans+=pic(s[i]);
+                    else {ans=""; break;}
+                }
+                oup.innerHTML = ans;
+            }
+            function reverse(){inp.value = inp.value.split("").reverse().join(""); convert();}
+        </script>
+    </body>
+</html>
