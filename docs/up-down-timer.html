@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="try to make CBA (or something else??)">
+        <title>up down timer</title>
+        <link rel="icon" href="assets/udtimer.png">
+    </head>
+    <style>
+        textarea{resize: none; background: white;}
+        h6{font-size: 1.8px;}
+
+        img{pointer-events: none;}
+    </style>
+    <body style="margin-top: 2px;">
+        <p id="timer" style="font-size: 48px; font-family: Arial, sans-serif;">00:00:00</p>
+        <button id="up" style="font-size: 20px; height: 40px; width: 60px;" onclick="CountUp()">+↑</button>
+        <button id="down" style="font-size: 20px; height: 40px; width: 60px;" onclick="CountDown()">-↓</button>
+        <button id="pause" style="font-size: 20px; height: 40px; width: 60px;" onclick="Pause()">||</button>
+        <span id="dir" style="font-size: 24px; font-family: Arial, sans-serif; margin-left: 10px;">paused</span>
+        <h6></h6><br><br>
+        <input type="text" id="setto" style="font-size: 20px;">&nbsp;
+        <button id="set" style="font-size: 20px; width: 60px;" onclick="SetTime()">set</button>
+        <script>
+            const UDTVAL = "udtval";
+            const UDTSTAMP = "udtstamp";
+            const UDTDIR = "udtdir";
+            const UP = "up";
+            const DOWN = "down";
+            const PAUSED = "paused";
+            const timer = document.getElementById("timer");
+            const dpdir = document.getElementById("dir");
+            const setto = document.getElementById("setto");
+            const SETFAIL = "Wrong format! Couldn't parse.";
+            let val = localStorage.getItem(UDTVAL);
+            if(val === null){
+                localStorage.setItem(UDTVAL, 0)
+                val = 0;
+            }
+            else val = Number(val);
+            let stamp = localStorage.getItem(UDTSTAMP);
+            if(stamp === null){
+                let s = Date.now();
+                localStorage.setItem(UDTSTAMP, s);
+                stamp = s;
+            }
+            else stamp = Number(stamp);
+            let dir = localStorage.getItem(UDTDIR);
+            if(dir === null){
+                localStorage.setItem(UDTDIR, PAUSED);
+                dir = PAUSED;
+            }
+            function GetAns(){
+                if(dir==UP)return val + Date.now() - stamp;
+                if(dir==DOWN)return val + stamp - Date.now();
+                return val;
+            }
+            function DisplayTime(){
+                let ans = GetAns();
+                let H = Math.floor(Math.abs(ans)/3600000);
+                let M = Math.floor(Math.abs(ans)/60000%60);
+                let S = Math.floor(Math.abs(ans)/1000%60);
+                let s = `${ans<0?"-":""}${H.toString().padStart(2, "0")}:${M.toString().padStart(2, "0")}:${S.toString().padStart(2, "0")}`;
+                timer.innerHTML = s;
+                setTimeout(() => {
+                    DisplayTime();
+                }, 100);
+            }
+            function Save(){
+                localStorage.setItem(UDTVAL, val);
+                localStorage.setItem(UDTSTAMP, stamp);
+                localStorage.setItem(UDTDIR, dir);
+                dpdir.innerHTML = dir;
+            }
+            function CountUp(){
+                val = GetAns();
+                stamp = Date.now();
+                dir = UP;
+                Save();
+            }
+            function CountDown(){
+                val = GetAns();
+                stamp = Date.now();
+                dir = DOWN;
+                Save();
+            }
+            function Pause(){
+                val = GetAns();
+                dir = PAUSED;
+                Save();
+            }
+            function SetTime(){
+                try{
+                    let s = setto.value;
+                    let sign = 1;
+                    if(s[0]=="-"){sign = -1; s = s.slice(1);}
+                    let t = s.split(":");
+                    if(t.length != 3){alert(SETFAIL); return;}
+                    let H = Number(t[0]);
+                    if(!Number.isInteger(H) || H<0){alert(SETFAIL); return;}
+                    let M = Number(t[1]);
+                    if(!Number.isInteger(M) || M<0 || M>59){alert(SETFAIL); return;}
+                    let S = Number(t[2]);
+                    if(!Number.isInteger(S) || S<0 || S>59){alert(SETFAIL); return;}
+                    let ans = sign * (H*3600000 + M*60000 + S*1000);
+                    stamp = Date.now();
+                    val = ans;
+                    Save();
+                }
+                catch(_){
+                    alert(SETFAIL); return;
+                }
+            }
+            Save();
+            DisplayTime();
+        </script>
+    </body>
+</html>
