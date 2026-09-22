@@ -22,17 +22,22 @@
         <h6></h6><br><br>
         <input type="text" id="setto" style="font-size: 20px;">&nbsp;
         <button id="set" style="font-size: 20px; width: 60px;" onclick="SetTime()">set</button>
+        <h6></h6><br><br>
+        <button id="daily" style="font-size: 20px; width: 120px;" onclick="DailyAdd(4500000)">+75min (once/day)</button>
         <script>
             const UDTVAL = "udtval";
             const UDTSTAMP = "udtstamp";
             const UDTDIR = "udtdir";
+            const UDTDAILY = "udtdaily";
             const UP = "up";
             const DOWN = "down";
             const PAUSED = "paused";
             const timer = document.getElementById("timer");
             const dpdir = document.getElementById("dir");
             const setto = document.getElementById("setto");
+            const daily = document.getElementById("daily");
             const SETFAIL = "Wrong format! Couldn't parse.";
+            if(localStorage.getItem(UDTDAILY)===GetDate())daily.remove();
             let val = localStorage.getItem(UDTVAL);
             if(val === null){
                 localStorage.setItem(UDTVAL, 0)
@@ -56,6 +61,10 @@
                 if(dir==DOWN)return val + stamp - Date.now();
                 return val;
             }
+            function GetDate(){
+                const date = new Date();
+                return `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}`;
+            }
             function DisplayTime(){
                 let ans = GetAns();
                 let H = Math.floor(Math.abs(ans)/3600000);
@@ -74,21 +83,31 @@
                 dpdir.innerHTML = dir;
             }
             function CountUp(){
+                if(dir==UP)return;
                 val = GetAns();
                 stamp = Date.now();
                 dir = UP;
                 Save();
             }
             function CountDown(){
+                if(dir==DOWN)return;
                 val = GetAns();
                 stamp = Date.now();
                 dir = DOWN;
                 Save();
             }
             function Pause(){
+                if(dir==PAUSED)return;
                 val = GetAns();
                 dir = PAUSED;
                 Save();
+            }
+            function DailyAdd(q){
+                val += q;
+                const date = new Date();
+                localStorage.setItem(UDTDAILY, GetDate());
+                Save();
+                daily.remove();
             }
             function SetTime(){
                 try{
