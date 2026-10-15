@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Calculate how good each element is against a compound element.">
+        <title>Element Calculator</title>
+        <link rel="icon" href="assets/yutul/all.png">
+    </head>
+    <style>
+        textarea{resize: none; background: white;}
+        h6{font-size: 1.8px;}
+
+        img{pointer-events: none; height: 32px;}
+        input{width: 15px; height: 15px;}
+    </style>
+    <body style="margin-top: 2px;">
+        <p style="font-size: 24px; font-family: Arial, sans-serif; margin-top: 0; margin-bottom: 10px;">Element Calculator</p>
+        <div id="stats" style="font-size: 24px; font-family: Arial, sans-serif;">Light:</div>
+        <h6></h6>
+        <input type="checkbox" id="kan" name="kan" value="kan" onchange="Check()">
+        <label for="kan"><img src="assets/yutul/kān.svg"></label>
+        <input type="checkbox" id="sa" name="sa" value="sa" onchange="Check()">
+        <label for="sa"><img src="assets/yutul/sā.svg"></label>
+        <input type="checkbox" id="hong" name="hong" value="hong" onchange="Check()">
+        <label for="hong"><img src="assets/yutul/hòng.svg"></label>
+        <input type="checkbox" id="sre" name="sre" value="sre" onchange="Check()">
+        <label for="sre"><img src="assets/yutul/sré.svg"></label>
+        <input type="checkbox" id="pfa" name="pfa" value="pfa" onchange="Check()">
+        <label for="pfa"><img src="assets/yutul/pfǎ.svg"></label>
+        <input type="checkbox" id="fyuu" name="fyuu" value="fyuu" onchange="Check()">
+        <label for="fyuu"><img src="assets/yutul/fyuù.svg"></label>
+        <input type="checkbox" id="fiye" name="fiye" value="fiye" onchange="Check()">
+        <label for="fiye"><img src="assets/yutul/fiyè.svg"></label>
+        <h6></h6>
+        <div id="elem" style="font-size: 24px; font-family: Arial, sans-serif;">EMPTY</div>
+        <div id="ltp"></div>
+        <script>
+            const IN = 0.5; //ineffective
+            const NE = 1; //neutral
+            const EF = 1.5; //effective
+            const chart = [
+                [NE,NE,NE,NE,NE,NE,NE],
+                [NE,NE,EF,NE,IN,IN,EF],
+                [NE,IN,NE,EF,NE,EF,IN],
+                [NE,NE,IN,NE,EF,IN,EF],
+                [NE,EF,NE,IN,NE,EF,IN],
+                [NE,EF,IN,EF,IN,NE,NE],
+                [NE,IN,EF,IN,EF,NE,NE]
+            ];
+            const el = ["kan", "sa", "hong", "sre", "pfa", "fyuu", "fiye"];
+            const enel = ["LIGHT", "WATER", "FIRE", "PLANT", "SOIL", "WIND", "METAL"];
+            const cb = [document.getElementById(el[0]),document.getElementById(el[1]),document.getElementById(el[2]),document.getElementById(el[3]),document.getElementById(el[4]),document.getElementById(el[5]),document.getElementById(el[6])];
+            const stats = document.getElementById("stats");
+            const elem = document.getElementById("elem");
+            function Check(){
+                let val = [1,1,1,1,1,1,1];
+                let s = "EMPTY";
+                for(let i=1;i<7;i++){
+                    let count = 0;
+                    let damage = 0;
+                    for(let j=0;j<7;j++){
+                        if(cb[j].checked){
+                            count += 1;
+                            damage += chart[i][j];
+                        }
+                    }
+                    if(count==0)continue;
+                    val[i] = Math.round((damage/count + Number.EPSILON) * 100000) / 100000;
+                }
+                for(let j=0;j<7;j++)if(cb[j].checked)if(s=="EMPTY")s=enel[j];else s+="/"+enel[j];
+                stats.innerHTML = `<img src="assets/yutul/kān.svg">: ${val[0]}<br><img src="assets/yutul/sā.svg">: ${val[1]}<br><img src="assets/yutul/hòng.svg">: ${val[2]}<br><img src="assets/yutul/sré.svg">: ${val[3]}<br><img src="assets/yutul/pfǎ.svg">: ${val[4]}<br><img src="assets/yutul/fyuù.svg">: ${val[5]}<br><img src="assets/yutul/fiyè.svg">: ${val[6]}`;
+                elem.innerHTML = s;
+            }
+            Check();
+        </script>
+    </body>
+</html>
