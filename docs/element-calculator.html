@@ -16,6 +16,9 @@
     </style>
     <body style="margin-top: 2px;">
         <p style="font-size: 24px; font-family: Arial, sans-serif; margin-top: 0; margin-bottom: 10px;">Element Calculator</p>
+        <input type="checkbox" id="frac" name="frac" value="frac" onchange="Check()">
+        <label for="frac" style="font-size: 24px; font-family: Arial, sans-serif;">fraction</label>
+        <h6></h6>
         <div id="stats" style="font-size: 24px; font-family: Arial, sans-serif;">Light:</div>
         <h6></h6>
         <input type="checkbox" id="kan" name="kan" value="kan" onchange="Check()">
@@ -36,9 +39,9 @@
         <div id="elem" style="font-size: 24px; font-family: Arial, sans-serif;">EMPTY</div>
         <div id="ltp"></div>
         <script>
-            const IN = 0.5; //ineffective
+            const IN = 0.25; //ineffective
             const NE = 1; //neutral
-            const EF = 1.5; //effective
+            const EF = 1.75; //effective
             const chart = [
                 [NE,NE,NE,NE,NE,NE,NE],
                 [NE,NE,EF,NE,IN,IN,EF],
@@ -53,6 +56,11 @@
             const cb = [document.getElementById(el[0]),document.getElementById(el[1]),document.getElementById(el[2]),document.getElementById(el[3]),document.getElementById(el[4]),document.getElementById(el[5]),document.getElementById(el[6])];
             const stats = document.getElementById("stats");
             const elem = document.getElementById("elem");
+            const frac = document.getElementById("frac");
+            function isWholeNum(x, epsilon = 1e-9) {
+                if(typeof x !== 'number' || !Number.isFinite(x))return false;
+                return Math.abs(x - Math.round(x)) < epsilon;
+            }
             function Check(){
                 let val = [1,1,1,1,1,1,1];
                 let s = "EMPTY";
@@ -66,9 +74,25 @@
                         }
                     }
                     if(count==0)continue;
-                    val[i] = Math.round((damage/count + Number.EPSILON) * 100000) / 100000;
+                    val[i] = damage/count;
                 }
                 for(let j=0;j<7;j++)if(cb[j].checked)if(s=="EMPTY")s=enel[j];else s+="/"+enel[j];
+                if(frac.checked){
+                    for(i=1;i<7;i++){
+                        for(j=1;j<100;j++){
+                            console.log("aaa");
+                            let tmp = val[i]*j;
+                            if(isWholeNum(tmp)){
+                                if(j!=1)val[i] = `${Math.round(tmp)}/${j}`;
+                                else val[i] = Math.round(val[i]);
+                                break;
+                            }
+                        }
+                    }
+                }
+                else{
+                    for(i=1;i<7;i++)val[i]=Math.round((val[i] + Number.EPSILON) * 100000) / 100000;
+                }
                 stats.innerHTML = `<img src="assets/yutul/kān.svg">: ${val[0]}<br><img src="assets/yutul/sā.svg">: ${val[1]}<br><img src="assets/yutul/hòng.svg">: ${val[2]}<br><img src="assets/yutul/sré.svg">: ${val[3]}<br><img src="assets/yutul/pfǎ.svg">: ${val[4]}<br><img src="assets/yutul/fyuù.svg">: ${val[5]}<br><img src="assets/yutul/fiyè.svg">: ${val[6]}`;
                 elem.innerHTML = s;
             }
